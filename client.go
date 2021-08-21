@@ -96,10 +96,14 @@ type AccountAttributes struct {
 
 // NewClient - creates a new account client
 func NewClient(options *ClientOptions) (client *Client) {
+	var httpClient *http.Client
 	client = &Client{}
 
 	// prepare http client
-	client.handler = httprequest.NewRequestHandler(options.HTTPClient)
+	if options != nil {
+		httpClient = options.HTTPClient
+	}
+	client.handler = httprequest.NewRequestHandler(httpClient)
 
 	return client
 }
