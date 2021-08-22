@@ -5,11 +5,6 @@ AccountLib is a client library for interacting with account API's
 ## Description
 This application is responsible for providing Create, Fetch, Delete functionalities for account API. Internally this library uses in-built net/http library for making http requests.
 
-## Installation
-You can install the library using
-
-```go get github.com/karthikpothineni/accountlib```
-
 ## Setup
 ### Local
 1. Clone the repository under GOPATH
