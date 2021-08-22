@@ -39,4 +39,6 @@ Account deleted successfully
 ## Code Coverage
 Current code coverage is more than **90%**
 
+## Circle CI
+Added Circle CI integration. For every commit, both the lint and tests will be executed
 
