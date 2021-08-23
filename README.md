@@ -2,6 +2,10 @@ AccountLib
 ==========
 AccountLib is a client library for interacting with account API's
 
+## AUTHOR
+### Name -> Karthik Pothineni
+### Email -> karthikpvs94@gmail.com
+
 ## Description
 This application is responsible for providing Create, Fetch, Delete functionalities for account API. Internally this library uses in-built net/http library for making http requests.
 
