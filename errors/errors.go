@@ -5,8 +5,8 @@ import (
 	"net/http"
 )
 
-// ErrorMap - holds error message for respective status code
-var ErrorMap = map[int]string{
+// errorMap - holds error message for respective status code
+var errorMap = map[int]string{
 	http.StatusBadRequest:          "bad request",
 	http.StatusUnauthorized:        "unauthorized",
 	http.StatusForbidden:           "forbidden",
@@ -23,7 +23,7 @@ var ErrorMap = map[int]string{
 
 // handleErrorStatusCode - returns an error based on the status code
 func HandleErrorStatusCode(statusCode int, response []byte) (err error) {
-	if errMsg, ok := ErrorMap[statusCode]; ok {
+	if errMsg, ok := errorMap[statusCode]; ok {
 		err = fmt.Errorf("%s: %s", errMsg, string(response))
 	} else {
 		err = fmt.Errorf("internal error: %s", string(response))

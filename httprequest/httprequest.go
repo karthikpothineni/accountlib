@@ -39,11 +39,12 @@ var (
 	}
 )
 
+// RequestHandlerIface - request handler interface
 type RequestHandlerIface interface {
 	MakeRequest(specs *RequestSpecifications) (statusCode int, body []byte, headers http.Header, err error)
 }
 
-// RequestSpecifications - controls the each http requests behaviour
+// RequestSpecifications - controls each http request behaviour
 type RequestSpecifications struct {
 	URL        string
 	HTTPMethod string
